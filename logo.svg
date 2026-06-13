@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 460 150" width="100%" height="100%">
+  <defs>
+    <!-- Brand colors -->
+    <style>
+      .brand-blue-text {
+        font-family: 'Arial', 'Helvetica', 'Segoe UI', sans-serif;
+        font-size: 70px;
+        font-weight: 300;
+        fill: #1958a7;
+        letter-spacing: -1px;
+      }
+      .chile-text {
+        font-family: 'Arial', 'Helvetica', 'Segoe UI', sans-serif;
+        font-size: 22px;
+        font-weight: 400;
+        fill: #1a1a1a;
+        letter-spacing: 0.5px;
+      }
+    </style>
+  </defs>
+
+  <!-- Left Text: PLA -->
+  <text x="185" y="80" text-anchor="end" class="brand-blue-text">PLA</text>
+
+  <!-- Dynamic S Icon in Center -->
+  <g transform="translate(230, 65)">
+    <!-- Top Hook -->
+    <path d="M -18,15 C -24,-15 -2,-48 32,-48 C 38,-48 28,-40 18,-33 C -4,-18 -14,2 -18,15 Z" fill="#1958a7" />
+    <path d="M -10,10 C -15,-10 3,-32 23,-32 C 28,-32 19,-27 12,-21 C -2,-11 -6,0 -10,10 Z" fill="#2cb53b" />
+    
+    <!-- Bottom Hook (Rotated 180 degrees for perfect symmetry) -->
+    <g transform="rotate(180)">
+      <path d="M -18,15 C -24,-15 -2,-48 32,-48 C 38,-48 28,-40 18,-33 C -4,-18 -14,2 -18,15 Z" fill="#1958a7" />
+      <path d="M -10,10 C -15,-10 3,-32 23,-32 C 28,-32 19,-27 12,-21 C -2,-11 -6,0 -10,10 Z" fill="#2cb53b" />
+    </g>
+  </g>
+
+  <!-- Right Text: TEM -->
+  <text x="275" y="80" text-anchor="start" class="brand-blue-text">TEM</text>
+
+  <!-- Left Lines: Symmetric look -->
+  <line x1="18" y1="92" x2="185" y2="92" stroke="#1958a7" stroke-width="3" />
+  <line x1="18" y1="110" x2="135" y2="110" stroke="#2cb53b" stroke-width="3.5" />
+
+  <!-- Right Lines: Symmetric look -->
+  <line x1="275" y1="92" x2="442" y2="92" stroke="#1958a7" stroke-width="3" />
+  <line x1="325" y1="110" x2="442" y2="110" stroke="#2cb53b" stroke-width="3.5" />
+
+  <!-- Bottom Right Text: CHILE (Underlined) -->
+  <text x="442" y="140" text-anchor="end" class="chile-text" text-decoration="underline">CHILE</text>
+</svg>
