@@ -7,6 +7,15 @@ const cors = require("cors");
 const { MongoClient } = require("mongodb");
 
 const app = express();
+
+// Global error handlers to prevent container crashes on unhandled errors
+process.on("unhandledRejection", (reason, promise) => {
+  console.error("Unhandled Rejection at:", promise, "reason:", reason);
+});
+process.on("uncaughtException", (error) => {
+  console.error("Uncaught Exception thrown:", error);
+});
+
 const server = http.createServer(app);
 const io = socketIo(server, {
   cors: {
