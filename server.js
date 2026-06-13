@@ -109,8 +109,6 @@ const connectDatabase = async () => {
   }
 };
 
-connectDatabase();
-
 // API Endpoints
 app.get("/api/state", async (req, res) => {
   try {
@@ -186,4 +184,7 @@ server.listen(PORT, () => {
   console.log(`  PLASTEM ERP SERVER RUNNING ON PORT ${PORT}`);
   console.log(`  Local URL: http://localhost:${PORT}`);
   console.log(`=========================================`);
+  
+  // Connect to database in the background after the server is listening
+  connectDatabase();
 });
